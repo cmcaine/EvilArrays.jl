@@ -1,6 +1,6 @@
 # EvilArrays.jl
 
-`EvilArray` is an AbstractArray that will throw errors if you try to index it without using eachindex, firstindex or lastindex.
+`EvilArray` is an AbstractArray that will throw errors if you try to index it without using `eachindex`, `firstindex` or `lastindex`.
 
 The intention is that you can use this array type in your tests to ensure that your code is not making assumptions about the indexes of your arrays.
 
