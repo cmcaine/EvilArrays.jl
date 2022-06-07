@@ -32,3 +32,27 @@ using Test
     @test A2 .+ zeros(axes(A2)) == A2
     @test (A2 .+ similar(A2); true) # testing that this does not throw an error
 end
+
+@testset "readme example" begin
+    function sum_first_5(A)
+        @assert length(A) >= 5
+        acc = 0
+        for idx in 1:5
+            acc += A[idx]
+        end
+        acc
+    end
+
+    @test_throws BoundsError sum_first_5(1:10) == sum_first_5(EvilArray(1:10))
+
+    function good_sum_first_5(A)
+        @assert length(A) >= 5
+        acc = 0
+        for v in Iterators.take(A, 5)
+            acc += v
+        end
+        acc
+    end
+
+    @test good_sum_first_5(1:10) == good_sum_first_5(EvilArray(1:10))
+end
