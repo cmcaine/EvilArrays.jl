@@ -1,7 +1,7 @@
 name = "EvilArrays"
 uuid = "2841289f-1868-4ac6-8d7a-1afe267ffb4f"
 authors = ["Colin Caine <cmcaine@gmail.com>"]
-version = "0.1.0"
+version = "1.0.0"
 
 [deps]
 OffsetArrays = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
