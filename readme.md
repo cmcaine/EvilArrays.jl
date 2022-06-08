@@ -1,6 +1,6 @@
 # EvilArrays.jl
 
-`EvilArray` is an AbstractArray that will throw errors if you try to index it directly without using `eachindex`, `firstindex` or `lastindex`, `A[begin:end]` or similar.
+`EvilArray` is an AbstractArray that will throw errors if you try to index it directly without using `eachindex`, `firstindex` or `lastindex`, `axes` or similar.
 
 `EvilArray`s will also throw errors if you try to broadcast with them and another array (scalars will work).
 

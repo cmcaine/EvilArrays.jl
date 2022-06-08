@@ -15,10 +15,9 @@ using Test
 
     @test first([A[k] for k in keys(A)]) == 42
 
-    # firstindex(A):lastindex(A) should be legit
+    # Every index in firstindex(A):lastindex(A) should be legit
     A2 = EvilArray(5:10)
     @test [A2[idx] for idx in firstindex(A2):lastindex(A2)] == 5:10
-    @test A2[begin:end] == 5:10
 
     # Broadcasting works with a scalar
     @test collect(EvilArray(1:10) .+ 1) == 2:11
